@@ -5,21 +5,23 @@
 ![img](/image/exit.png)
 
 <hr>
+
 ### Table of content
 
-<ul>
-<span style="color:#0969da;">
-<li><b> Explore the data</b></li>
-<li><b> Machine Learning Prediction Analysis</b></li>
-<li><b>Conclusions and recomendations</b></li>
-</ul>
+- **[ Explore the data](#explore-the-data)**
+- **[ Machine Learning Prediction Analysis](#machine-learning-prediction-analysis)**
+- **[ Conclusions and recomendations](#final-conclusions)**
+  
 <hr>
+
 ## *Overview*
 
 ###### This dataset comes from an Iranian telecom company, with each row representing a customer over a year period. 
 ###### Along with a churn label, there is information on the customers' activity, such as call failures and subscription length.
 ###### Not sure where to begin? Scroll to the bottom to find challenges!
+
 <hr>
+
 ### Dataset:file_folder:
 
 |    |   Call Failure |   Complaints |   Subscription Length |   Charge Amount |   Seconds of Use |   Frequency of use |   Frequency of SMS |   Distinct Called Numbers |   Age Group |   Tariff Plan |   Status |   Age |   Customer Value |   Churn |
@@ -63,7 +65,7 @@
 
 <hr>
 
-## Exploratory Data Analysis
+## Explore the data
 
 #### Basic Imports
 import pandas as pd
@@ -193,6 +195,7 @@ So a Zero rate Classifier that always predict a "No Churn" scenary would have an
 
 
 <hr>
+
 ## Installation
 
 The Code is written in Python 3.10.9 If you don't have Python installed you can find it [here](https://www.python.org/downloads/release/python-3109/). If you are using a lower version of Python you can upgrade using the pip package, ensuring you have the latest version of pip. 

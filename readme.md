@@ -1,4 +1,4 @@
-#*Telecom Churn Prediction*
+# *Telecom Churn Prediction*
 
 
 
@@ -14,13 +14,13 @@
 <li><b>Conclusions and recomendations</b></li>
 </ul>
 <hr>
-##*Overview*
+## *Overview*
 
-######This dataset comes from an Iranian telecom company, with each row representing a customer over a year period. 
-######Along with a churn label, there is information on the customers' activity, such as call failures and subscription length.
-######Not sure where to begin? Scroll to the bottom to find challenges!
+###### This dataset comes from an Iranian telecom company, with each row representing a customer over a year period. 
+###### Along with a churn label, there is information on the customers' activity, such as call failures and subscription length.
+###### Not sure where to begin? Scroll to the bottom to find challenges!
 <hr>
-###Dataset:file_folder:
+### Dataset:file_folder:
 
 |    |   Call Failure |   Complaints |   Subscription Length |   Charge Amount |   Seconds of Use |   Frequency of use |   Frequency of SMS |   Distinct Called Numbers |   Age Group |   Tariff Plan |   Status |   Age |   Customer Value |   Churn |
 |---:|---------------:|-------------:|----------------------:|----------------:|-----------------:|-------------------:|-------------------:|--------------------------:|------------:|--------------:|---------:|------:|-----------------:|--------:|
@@ -48,7 +48,7 @@
 | Churn                 | Class label (1: Churn, 0: Non-churn)                  |
 
 
-##*Motivation
+## *Motivation
 
 ![img](/image/exit2.jpg) 
 
@@ -63,7 +63,7 @@
 
 <hr>
 
-##Exploratory Data Analysis
+## Exploratory Data Analysis
 
 #### Basic Imports
 import pandas as pd
@@ -78,11 +78,11 @@ from sklearn.model_selection import train_test_split, KFold, GridSearchCV
 from sklearn.preprocessing import StandardScaler
 from sklearn.pipeline import make_pipeline
 
-####Datafrane definition
+#### Datafrane definition
 
 df=pd.read_csv("data/customer_churn.csv")
 
-####Statistical description
+#### Statistical description
 
 |       |   Call Failure |   Complaints |   Subscription Length |   Charge Amount |   Distinct Called Numbers |   Age Group |   Tariff Plan |      Status |   Customer Value |       Churn |    SMS ratio |   Seconds_Use_Group |
 |:------|---------------:|-------------:|----------------------:|----------------:|--------------------------:|------------:|--------------:|------------:|-----------------:|------------:|-------------:|--------------------:|
@@ -96,7 +96,7 @@ df=pd.read_csv("data/customer_churn.csv")
 | max   |       36       |    1         |              47       |       10        |                   97      |    5        |      2        |    2        |         2165.28  |    1        |    1         |             3       |
 
 
-####Variables relationship and visual exploration
+#### Variables relationship and visual exploration
 
 |   Age Group |   (Age, min) |   (Age, max) |
 |------------:|-----------------:|-----------------:|
@@ -117,12 +117,12 @@ df=pd.read_csv("data/customer_churn.csv")
 |           5 |            28.2471 |            77.5235 |
 
 
-##Visualisation
+## Visualisation
 
-######The distribution of Frequency of SMS
+###### The distribution of Frequency of SMS
 ![img](/image/img1.png) 
 
-######Frequency of SMS by age distribution
+###### Frequency of SMS by age distribution
 ![img](/image/img2.png) 
 
 #### Observation
@@ -130,7 +130,7 @@ Age Groups 4 and 5 uses comparatively much less SMS than Calls
 
 ###### Seconds of use by Age Group and Tariff Plan
 ![img](/image/img3.png) 
-######Call Failure, Complains and Subscription Length vs Churn/No Churn
+###### Call Failure, Complains and Subscription Length vs Churn/No Churn
 ![img](/image/img4.png) 
 ![img](/image/img5.png) 
 ![img](/image/img6.png) 
@@ -141,7 +141,7 @@ The customer mostly Churn between 32 and 38 months. The median is about 35 month
 
 The median of Call failures in customers that churns is about 5.
 
-######Correlation between possible features and Features with Target
+###### Correlation between possible features and Features with Target
 
 ![img](/image/img7.png) 
 
@@ -151,8 +151,8 @@ Highly positively or negatively correlated features with Churn: Status, Complain
 
 Highly positively correlated pairs of features: Age group with age, Freq of use with seconds of use, Customer value with freq of sms
 
-##Machine Learning Prediction Analysis
-######Number of Churn vs No Churn
+## Machine Learning Prediction Analysis
+###### Number of Churn vs No Churn
 
 ![img](/image/img8.png) 
 
@@ -176,24 +176,25 @@ So a Zero rate Classifier that always predict a "No Churn" scenary would have an
 
   ![img](/image/img9.png) 
 
-######Feature Influence - What Causes or its related with Churn?
+###### Feature Influence - What Causes or its related with Churn?
 
 ![img](/image/img10.png) 
 
 
-##Final Conclusions
+## Final Conclusions
 - The Model performed better than the baseline comparison model with an accuracy of about 95% versus 85%.
 -  More important it correctly classified Customer Churn about 80% of the cases
 - The most influencial variables related with Churn are: Complains - Status- Susbscription Lenght - Customer Value - Distinct Called Numbers - SMS ratio and Call Failure
 
-##Actions that could prevent Churn
+## Actions that could prevent Churn
 
 - Monitor Subcription Lenghts, because most of the Customers Churns appeared at about 32 to 38 months, and offering promotional discounts or benefits. The benefits could have been decided by age group taking on acount SMS vs Calls frequency (see Graphs in Exploratory Analysis)
 - Tracking Call Failures if it is possible. When Call Failures exceed 5 contact the customer
 
 
 <hr>
-##Installation
+## Installation
 
 The Code is written in Python 3.10.9 If you don't have Python installed you can find it [here](https://www.python.org/downloads/release/python-3109/). If you are using a lower version of Python you can upgrade using the pip package, ensuring you have the latest version of pip. 
 
+[![Launch Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/amal141098/Projet-Python-Churn-Prediction/master?labpath=index.ipynb)

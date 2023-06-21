@@ -50,7 +50,7 @@
 | Churn                 | Class label (1: Churn, 0: Non-churn)                  |
 
 
-## *Motivation
+## Motivation
 
 ![img](/image/exit2.jpg) 
 

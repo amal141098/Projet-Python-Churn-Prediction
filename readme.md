@@ -1,7 +1,11 @@
 # *Telecom Churn Prediction*
 
+<a target="_blank" href="https://colab.research.google.com/github/amal141098/Projet-Python-Churn-Prediction/blob/main/index.ipynb">
+  <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/>
+</a>
+<br>
 
-
+[![Launch Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/amal141098/Projet-Python-Churn-Prediction/master?labpath=index.ipynb)
 ![img](/image/exit.png)
 
 <hr>
